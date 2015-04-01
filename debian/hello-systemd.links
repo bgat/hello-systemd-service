@@ -1,0 +1,2 @@
+../hello-systemd.service /lib/systemd/system/multi-user.target.wants/hello-systemd.service
+

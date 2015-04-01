@@ -1,0 +1,17 @@
+[Unit]
+Description=A "service" example
+Documentation=http://www.freedesktop.org/software/systemd/man/systemd.service.html
+
+[Service]
+Type=service
+ExecStartPre=/bin/true
+ExecStart=/usr/sbin/hello-systemd
+ExecStartPost=/bin/true
+#ExecReload=/bin/kill -HUP $MAINPID
+#ExecStop=/bin/kill -HUP $MAINPID
+RestartSec=10
+#no, on-success, on-failure, on-abnormal, on-watchdog, on-abort, or always.
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
